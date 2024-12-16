@@ -13,3 +13,6 @@ You must dispatch the packages in the following stacks:
 - **REJECTED**: packages that are **both** heavy and bulky are rejected.
 
 
+The sort function definition is provided in the main.py file. 
+
+Run the test_cases.py file to test the sort function.
