@@ -1,4 +1,5 @@
 import unittest
+from main import sort
 
 class TestPackageSorter(unittest.TestCase):
   def test_sort_standard(self):
@@ -20,4 +21,5 @@ class TestPackageSorter(unittest.TestCase):
   def test_sort_rejected(self):
     self.assertEqual(sort(150, 10, 10, 20), "REJECTED")
 
-unittest.main()
+if __name__ == '__main__':
+  unittest.main()
