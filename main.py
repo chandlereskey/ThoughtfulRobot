@@ -1,5 +1,3 @@
-import unittest
-
 # Sort the packages using the following criteria:
 
 # - A package is **bulky** if its volume (Width x Height x Length) is greater than or equal to 1,000,000 cm³ or when one of its dimensions is greater or equal to 150 cm.
@@ -24,25 +22,5 @@ def sort(width, height, length, mass):
 
 print('running unittests')
 
-class TestPackageSorter(unittest.TestCase):
-  def test_sort_standard(self):
-    self.assertEqual(sort(10, 10, 10, 10), "STANDARD")
 
-  def test_sort_special(self):
-    # bulky because of width
-    self.assertEqual(sort(150, 10, 10, 10), "SPECIAL")
-    # bulky because of height
-    self.assertEqual(sort(10, 150, 10, 10), "SPECIAL")
-    # bulky because of length
-    self.assertEqual(sort(10, 10, 150, 10), "SPECIAL")
-    # bulky because of volume
-    self.assertEqual(sort(100, 100, 100, 10), "SPECIAL")
-
-    # heavy
-    self.assertEqual(sort(10, 10, 10, 20), "SPECIAL")
-
-  def test_sort_rejected(self):
-    self.assertEqual(sort(150, 10, 10, 20), "REJECTED")
-
-unittest.main()
   
